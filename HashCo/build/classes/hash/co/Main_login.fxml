@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="710.0" maxWidth="1200.0" minHeight="710.0" minWidth="1200.0" prefHeight="710.0" prefWidth="1200.0" styleClass="body" stylesheets="@MainBody_css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hash.co.Main_loginController">
+   <children>
+      <ImageView fitHeight="125.0" fitWidth="121.0" layoutX="538.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="538.0" AnchorPane.rightAnchor="541.0">
+         <image>
+            <Image url="@../../Images/heart-beat-icon.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="466.0" layoutY="431.0" prefHeight="40.0" prefWidth="270.0" ripplerFill="#f8f8f8" style="-fx-background-color: #FFCDD2; -fx-background-radius: 15px;" text="Sign in">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="463.0" layoutY="552.0" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 15px;" text="Forget password ?" textFill="WHITE" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField focusColor="TRANSPARENT" labelFloat="true" layoutX="465.0" layoutY="239.0" prefHeight="40.0" prefWidth="270.0" promptText="  User Number" style="-fx-background-color: #EAEAEA; -fx-background-radius: 15px;" unFocusColor="#4d4d4d01" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="465.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXTextField>
+      <JFXPasswordField focusColor="#a63f3f00" labelFloat="true" layoutX="465.0" layoutY="315.0" prefHeight="40.0" prefWidth="270.0" promptText="  Password" style="-fx-background-color: #EAEAEA; -fx-background-radius: 15px;" unFocusColor="#a83f3f00" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="465.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXPasswordField>
+      <CheckBox layoutX="487.0" layoutY="381.0" mnemonicParsing="false" text="Remember me" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </CheckBox>
+      <Separator layoutX="451.0" layoutY="527.0" opacity="0.67" prefHeight="1.0" prefWidth="299.0" />
+      <JFXButton cancelButton="true" layoutX="1164.0" minWidth="20.0" prefHeight="32.0" prefWidth="30.0" ripplerFill="TRANSPARENT" text="X" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1162.0" layoutY="6.0" onAction="#handleCloseButtonAction" onMouseClicked="#handleCloseButtonAction" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

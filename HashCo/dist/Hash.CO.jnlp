@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Hash.CO.jnlp">
+  <information>
+    <title>Hash.CO</title>
+    <vendor>Osaid Draidi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Hash.CO.jar" size="216107" download="eager" />
+    <jar href="lib\charm-glisten-4.4.1-javadoc.jar" size="2817088" download="eager" />
+    <jar href="lib\charm-glisten-4.4.1.jar" size="1040787" download="eager" />
+    <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Hash.CO" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="hash.co.HashCO"  name="Hash.CO" />
+  <update check="always"/>
+</jnlp>
