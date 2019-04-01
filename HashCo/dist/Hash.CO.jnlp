@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Hash.CO.jar" size="216107" download="eager" />
+    <jar href="Hash.CO.jar" size="216078" download="eager" />
     <jar href="lib\charm-glisten-4.4.1-javadoc.jar" size="2817088" download="eager" />
     <jar href="lib\charm-glisten-4.4.1.jar" size="1040787" download="eager" />
     <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
