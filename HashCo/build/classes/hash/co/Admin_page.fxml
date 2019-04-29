@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="92.0" prefHeight="617.0" prefWidth="250.0" style="-fx-background-color: #F5EDEB;">
+         <children>
+            <AnchorPane prefHeight="617.0" prefWidth="40.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <JFXButton layoutY="47.0" prefHeight="50.0" prefWidth="250.0" text="My Acount" textFill="#000000cc">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="107.0" prefHeight="47.0" prefWidth="250.0" text="Information" textFill="#000000cc">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="167.0" prefHeight="47.0" prefWidth="250.0" text="Add Acount" textFill="#000000cc">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="227.0" prefHeight="47.0" prefWidth="250.0" text="Log Out" textFill="#d61111cc">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane prefHeight="92.0" prefWidth="1200.0" style="-fx-background-color: #D61111;">
+         <effect>
+            <DropShadow color="#000000c3" height="13.97" radius="3.2425" width="1.0" />
+         </effect>
+         <children>
+            <Text fill="#000000cc" fontSmoothingType="LCD" layoutX="70.0" layoutY="60.0" opacity="0.8" stroke="#f5b0b0a7" strokeType="OUTSIDE" strokeWidth="1.5" text="Admin" wrappingWidth="141.13671875">
+               <font>
+                  <Font name="Georgia Bold" size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow height="11.0" radius="5.0" width="11.0" />
+               </effect>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="myAccount_doc1" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TableView layoutX="23.0" layoutY="74.0" prefHeight="400.0" prefWidth="900.0">
+               <columns>
+                  <TableColumn prefWidth="57.0" style="-fx-background-color: #FDEDEC;" text="ID" />
+                  <TableColumn prefWidth="113.0" style="-fx-background-color: #FDEDEC;" text="User Number" />
+                  <TableColumn prefWidth="104.0" style="-fx-background-color: #FDEDEC;" text="Name" />
+                  <TableColumn prefWidth="202.0" style="-fx-background-color: #FDEDEC;" text="Email" />
+                  <TableColumn prefWidth="102.0" style="-fx-background-color: #FDEDEC;" text="Phone Number" />
+                  <TableColumn prefWidth="100.0" style="-fx-background-color: #FDEDEC;" text="Identity Number" />
+                  <TableColumn style="-fx-background-color: #FDEDEC;" text="Salary" />
+                  <TableColumn prefWidth="75.0" style="-fx-background-color: #FDEDEC;" text="Type" />
+                  <TableColumn prefWidth="66.0" style="-fx-background-color: #FDEDEC;" text="Gender" />
+               </columns>
+            </TableView>
+            <JFXButton layoutX="423.0" layoutY="521.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Show" textFill="#f5f4f4">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+      <Pane fx:id="myAccount_doc2" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Name :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="230.0" prefHeight="35.0" prefWidth="125.0" text="Password :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="120.0" prefHeight="35.0" prefWidth="125.0" text="Email :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="175.0" prefHeight="35.0" prefWidth="125.0" text="Address :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="175.0" prefHeight="35.0" prefWidth="125.0" text="User Name :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="120.0" prefHeight="35.0" prefWidth="125.0" text="Phone Number :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="285.0" prefHeight="35.0" prefWidth="125.0" text="Birthday :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Identity Number :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="192.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="192.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="647.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="647.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="647.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker defaultColor="#008f81ca" layoutX="647.0" layoutY="285.0" prefHeight="35.0" prefWidth="180.0" />
+            <JFXButton layoutX="192.0" layoutY="340.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Add" textFill="#f5f4f4">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="285.0" prefHeight="35.0" prefWidth="125.0" text="Salary :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="192.0" layoutY="285.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="230.0" prefHeight="35.0" prefWidth="125.0" text="Since degree :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="340.0" prefHeight="35.0" prefWidth="125.0" text="Gender :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="647.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox layoutX="647.0" layoutY="340.0" />
+            <JFXButton layoutX="192.0" layoutY="395.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Update" textFill="#f5f4f4">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+      <Pane fx:id="myAccount_doc" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Name :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="230.0" prefHeight="35.0" prefWidth="125.0" text="Password :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="120.0" prefHeight="35.0" prefWidth="125.0" text="Email :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="175.0" prefHeight="35.0" prefWidth="125.0" text="Address :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="175.0" prefHeight="35.0" prefWidth="125.0" text="User Name :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="120.0" prefHeight="35.0" prefWidth="125.0" text="Phone Number :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="230.0" prefHeight="35.0" prefWidth="125.0" text="Birthday :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Identity Number :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="192.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="192.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="647.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="647.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="647.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker defaultColor="#008f81ca" layoutX="647.0" layoutY="230.0" prefHeight="35.0" prefWidth="180.0" />
+            <JFXButton layoutX="190.0" layoutY="285.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Edit " textFill="#f5f4f4">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

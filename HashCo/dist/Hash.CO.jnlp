@@ -8,10 +8,13 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Hash.CO.jar" size="216078" download="eager" />
+    <jar href="Hash.CO.jar" size="225897" download="eager" />
+    <jar href="lib\activation.jar" size="124332" download="eager" />
     <jar href="lib\charm-glisten-4.4.1-javadoc.jar" size="2817088" download="eager" />
     <jar href="lib\charm-glisten-4.4.1.jar" size="1040787" download="eager" />
+    <jar href="lib\javax.mail-1.4.4.jar" size="495041" download="eager" />
     <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Hash.CO" >
     <param name="requiredFXVersion" value="8.0+"/>

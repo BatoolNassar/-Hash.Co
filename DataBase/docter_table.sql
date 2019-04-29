@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01 أبريل 2019 الساعة 20:16
--- إصدار الخادم: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Apr 24, 2019 at 10:44 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,12 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `docter table`
+-- Database: `docter_table`
 --
 
+-- --------------------------------------------------------
 
 --
--- بنية الجدول `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,24 +36,24 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `antenatalfollowup`
+-- Table structure for table `antenatalfollowup`
 --
 
 CREATE TABLE `antenatalfollowup` (
   `id` int(10) NOT NULL,
   `date` date NOT NULL,
-  `gestationalAge` int(10) NOT NULL,
+  `gestational_age` int(10) NOT NULL,
   `weight` double NOT NULL,
   `bd` varchar(50) COLLATE utf8_bin NOT NULL,
-  `urineAlb` varchar(50) COLLATE utf8_bin NOT NULL,
-  `urineSug` varchar(50) COLLATE utf8_bin NOT NULL,
-  `fundalHt` int(50) NOT NULL,
+  `urine_alb` varchar(50) COLLATE utf8_bin NOT NULL,
+  `urine_sug` varchar(50) COLLATE utf8_bin NOT NULL,
+  `fundal_ht` int(50) NOT NULL,
   `fhs` tinyint(1) NOT NULL,
   `oedema` varchar(50) COLLATE utf8_bin NOT NULL,
   `presentation` varchar(50) COLLATE utf8_bin NOT NULL,
   `remarks` varchar(50) COLLATE utf8_bin NOT NULL,
   `supplements` varchar(50) COLLATE utf8_bin NOT NULL,
-  `nextVisit` date NOT NULL,
+  `next_visit` date NOT NULL,
   `id_docter` int(10) NOT NULL,
   `id_mather` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -60,7 +61,7 @@ CREATE TABLE `antenatalfollowup` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `bloodtype`
+-- Table structure for table `bloodtype`
 --
 
 CREATE TABLE `bloodtype` (
@@ -69,7 +70,7 @@ CREATE TABLE `bloodtype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- إرجاع أو استيراد بيانات الجدول `bloodtype`
+-- Dumping data for table `bloodtype`
 --
 
 INSERT INTO `bloodtype` (`id`, `type`) VALUES
@@ -85,7 +86,7 @@ INSERT INTO `bloodtype` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `careandpreyery`
+-- Table structure for table `careandpreyery`
 --
 
 CREATE TABLE `careandpreyery` (
@@ -102,7 +103,7 @@ CREATE TABLE `careandpreyery` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `child`
+-- Table structure for table `child`
 --
 
 CREATE TABLE `child` (
@@ -116,7 +117,7 @@ CREATE TABLE `child` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `childcare`
+-- Table structure for table `childcare`
 --
 
 CREATE TABLE `childcare` (
@@ -132,22 +133,22 @@ CREATE TABLE `childcare` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `childexamination`
+-- Table structure for table `childexamination`
 --
 
 CREATE TABLE `childexamination` (
   `id` int(10) NOT NULL,
-  `birthOutCome` varchar(50) COLLATE utf8_bin NOT NULL,
-  `weightInGr` double DEFAULT NULL,
+  `birth_outcome` varchar(50) COLLATE utf8_bin NOT NULL,
+  `weightIn_gr` double DEFAULT NULL,
   `length` double DEFAULT NULL,
   `temp` double DEFAULT NULL,
   `pulse` varchar(50) COLLATE utf8_bin DEFAULT NULL,
-  `respiratoryRate` varchar(50) COLLATE utf8_bin NOT NULL,
-  `apgarScore` varchar(50) COLLATE utf8_bin NOT NULL,
-  `StartingBreastFeedingInTheFirstHourAfterDelivery` tinyint(1) NOT NULL,
-  `congenitalMalformation` varchar(50) COLLATE utf8_bin NOT NULL,
+  `respiratory_rate` varchar(50) COLLATE utf8_bin NOT NULL,
+  `apgar_score` varchar(50) COLLATE utf8_bin NOT NULL,
+  `SPF` tinyint(1) NOT NULL,
+  `congenital_malformation` varchar(50) COLLATE utf8_bin NOT NULL,
   `medication` varchar(50) COLLATE utf8_bin NOT NULL,
-  `vitK` tinyint(1) NOT NULL,
+  `vit_k` tinyint(1) NOT NULL,
   `HepatitisB1Vaccination` varchar(50) COLLATE utf8_bin NOT NULL,
   `complicationsAfterBirth` varchar(50) COLLATE utf8_bin NOT NULL,
   `Diagnosis` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -160,7 +161,7 @@ CREATE TABLE `childexamination` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `childmeasletsid`
+-- Table structure for table `childmeasletsid`
 --
 
 CREATE TABLE `childmeasletsid` (
@@ -178,12 +179,12 @@ CREATE TABLE `childmeasletsid` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `docter`
+-- Table structure for table `docter`
 --
 
 CREATE TABLE `docter` (
   `id` int(50) NOT NULL,
-  `scincedegree` text COLLATE utf8_bin NOT NULL,
+  `scince_degree` text COLLATE utf8_bin NOT NULL,
   `salary` int(10) NOT NULL,
   `Information_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -191,30 +192,30 @@ CREATE TABLE `docter` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `femalechildcheck`
+-- Table structure for table `femalechildcheck`
 --
 
 CREATE TABLE `femalechildcheck` (
   `id` int(10) NOT NULL,
   `age` int(10) NOT NULL,
   `date` date NOT NULL,
-  `generalCondition` tinyint(1) NOT NULL,
-  `frontYumperClosed` tinyint(1) NOT NULL,
-  `lackOfRedLightIsReversedOnThrRetina` tinyint(1) NOT NULL,
-  `deviationOfTheEye` tinyint(1) NOT NULL,
-  `lightReflectionOfTheCornealIsIncompete` tinyint(1) NOT NULL,
-  `slideInTheHeartsOfTheHeart` tinyint(1) NOT NULL,
-  `thePrudentIsAUnreasonable` tinyint(1) NOT NULL,
-  `tumorInTheAbdomen` tinyint(1) NOT NULL,
-  `encodingInTheLiver` tinyint(1) NOT NULL,
-  `analyticalExternalGenitalOrgans` tinyint(1) NOT NULL,
-  `SwillingInTheInguinalHerna` tinyint(1) NOT NULL,
-  `takeOfAtDysplasia` tinyint(1) NOT NULL,
-  `crisisIsLimited` tinyint(1) NOT NULL,
-  `noLikeAsymmetry` tinyint(1) NOT NULL,
-  `theSpineIsAbnormal` tinyint(1) NOT NULL,
-  `the ChildWalkIsAbnormal` tinyint(1) NOT NULL,
-  `cariesInTheTeeth` tinyint(1) NOT NULL,
+  `general_condition` tinyint(1) NOT NULL,
+  `front_yumper_closed` tinyint(1) NOT NULL,
+  `lack_red_light` tinyint(1) NOT NULL,
+  `deviation_eye` tinyint(1) NOT NULL,
+  `light_reflection` tinyint(1) NOT NULL,
+  `slide_heart` tinyint(1) NOT NULL,
+  `prudent_unreasonable` tinyint(1) NOT NULL,
+  `tumorIn_abdomen` tinyint(1) NOT NULL,
+  `encoding_liver` tinyint(1) NOT NULL,
+  `analytical_external` tinyint(1) NOT NULL,
+  `swilling_inguinal_herna` tinyint(1) NOT NULL,
+  `take_dysplasia` tinyint(1) NOT NULL,
+  `crisis_limited` tinyint(1) NOT NULL,
+  `no_like_asymmetry` tinyint(1) NOT NULL,
+  `spine_abnormal` tinyint(1) NOT NULL,
+  ` child_walk_abnormal` tinyint(1) NOT NULL,
+  `caries_teeth` tinyint(1) NOT NULL,
   `id_child` int(10) NOT NULL,
   `id_docter` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -222,7 +223,7 @@ CREATE TABLE `femalechildcheck` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `followupandcareofpregnantwomen`
+-- Table structure for table `followupandcareofpregnantwomen`
 --
 
 CREATE TABLE `followupandcareofpregnantwomen` (
@@ -237,7 +238,7 @@ CREATE TABLE `followupandcareofpregnantwomen` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `hasband`
+-- Table structure for table `hasband`
 --
 
 CREATE TABLE `hasband` (
@@ -248,7 +249,7 @@ CREATE TABLE `hasband` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `immunization`
+-- Table structure for table `immunization`
 --
 
 CREATE TABLE `immunization` (
@@ -262,52 +263,79 @@ CREATE TABLE `immunization` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `information`
+-- Table structure for table `information`
 --
 
 CREATE TABLE `information` (
   `id` int(10) NOT NULL,
   `name` varchar(15) COLLATE utf8_bin NOT NULL,
   `phone` int(11) NOT NULL,
-  `number` int(10) NOT NULL,
-  `identitynumber` int(10) NOT NULL,
+  `identity_number` int(10) NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 NOT NULL,
   `Bday` date NOT NULL,
   `adress` varchar(50) COLLATE utf8_bin NOT NULL,
   `imag` varchar(255) COLLATE utf8_bin NOT NULL,
   `typeperson_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Dumping data for table `information`
+--
+
+INSERT INTO `information` (`id`, `name`, `phone`, `identity_number`, `email`, `Bday`, `adress`, `imag`, `typeperson_id`) VALUES
+(1, 'ahmad', 5994345, 3454535, 'osaid19961741@gmail.com', '0000-00-00', 'beit leed', '', 1);
+
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `malechildcheck`
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(10) NOT NULL,
+  `number` int(10) NOT NULL,
+  `pass` varchar(50) COLLATE utf8_bin NOT NULL,
+  `id_information` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `number`, `pass`, `id_information`) VALUES
+(1, 1, '111', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `malechildcheck`
 --
 
 CREATE TABLE `malechildcheck` (
   `id` int(10) NOT NULL,
   `age` int(10) NOT NULL,
   `date` date NOT NULL,
-  `generalCondition` tinyint(1) NOT NULL,
-  `anteriorFontanelle` tinyint(1) NOT NULL,
-  `invertedRedLightOnTheRetina` tinyint(1) NOT NULL,
-  `deviationOfTheEye` tinyint(1) NOT NULL,
-  `theLightReflectionOnTheCorneaIsNotSymmetrical` tinyint(1) NOT NULL,
-  `swishInTheSoundsOfTheHeart` tinyint(1) NOT NULL,
-  `theFemoralArteryIsImperceptible` tinyint(1) NOT NULL,
-  `aTumorInTheAbdomen` tinyint(1) NOT NULL,
-  `liverHypertrophy` tinyint(1) NOT NULL,
-  `swellingTheUpperPartOfTheScrotumIsSeparateFromTheTest` tinyint(1) NOT NULL,
-  `swellingWithinTheScrotumIsSeparateFromTheTesticle` tinyint(1) NOT NULL,
-  `theTestisIsNotPalpable` tinyint(1) NOT NULL,
-  `aSwollenTesticle` tinyint(1) NOT NULL,
+  `general_condition` tinyint(1) NOT NULL,
+  `anterior_fontanelle` tinyint(1) NOT NULL,
+  `inverted_red_light` tinyint(1) NOT NULL,
+  `deviation_eye` tinyint(1) NOT NULL,
+  `light_reflection` tinyint(1) NOT NULL,
+  `swish_sound_heart` tinyint(1) NOT NULL,
+  `femoral_artery_imperceptible` tinyint(1) NOT NULL,
+  `tumor_abdomen` tinyint(1) NOT NULL,
+  `liver_hypertrophy` tinyint(1) NOT NULL,
+  `upper_scrotum_separate` tinyint(1) NOT NULL,
+  `within_scrotum_separate` tinyint(1) NOT NULL,
+  `testisIs_palpable` tinyint(1) NOT NULL,
+  `swollen_testicle` tinyint(1) NOT NULL,
   `hypospadias` tinyint(1) NOT NULL,
-  `inguinalHernia` tinyint(1) NOT NULL,
+  `inguinal_hernia` tinyint(1) NOT NULL,
   `dysplasia` tinyint(1) NOT NULL,
-  `SpacingHips` tinyint(1) NOT NULL,
-  `thereIsNoSymmetryInTheDistanceBetweenTheHips` tinyint(1) NOT NULL,
-  `theSpineChainIsAbnormal` tinyint(1) NOT NULL,
-  `the ChildsWalkIsAbnormal` tinyint(1) NOT NULL,
-  `cariesInTheTeeth` tinyint(1) NOT NULL,
+  `Spacing_hips` tinyint(1) NOT NULL,
+  `no_symmetry_Distance_hips` tinyint(1) NOT NULL,
+  `spine_chainIs_abnormal` tinyint(1) NOT NULL,
+  `Walk_abnormal` tinyint(1) NOT NULL,
+  `caries_teeth` tinyint(1) NOT NULL,
   `id_docter` int(10) NOT NULL,
   `id_child` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -315,7 +343,7 @@ CREATE TABLE `malechildcheck` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `mather`
+-- Table structure for table `mather`
 --
 
 CREATE TABLE `mather` (
@@ -329,7 +357,7 @@ CREATE TABLE `mather` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `mathercare`
+-- Table structure for table `mathercare`
 --
 
 CREATE TABLE `mathercare` (
@@ -347,24 +375,24 @@ CREATE TABLE `mathercare` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `matherexamination`
+-- Table structure for table `matherexamination`
 --
 
 CREATE TABLE `matherexamination` (
   `id` int(10) NOT NULL,
-  `placeOfBirth` varchar(50) COLLATE utf8_bin NOT NULL,
-  `dateOfDelivery` date NOT NULL,
-  `timeOfDelivery` time(6) NOT NULL,
-  `wayOfDelivery` varchar(50) COLLATE utf8_bin NOT NULL,
-  `weeksOfPregnancy` int(10) NOT NULL,
+  `place_birth` varchar(50) COLLATE utf8_bin NOT NULL,
+  `date` date NOT NULL,
+  `time` time(6) NOT NULL,
+  `way` varchar(50) COLLATE utf8_bin NOT NULL,
+  `week_pregnancy` int(10) NOT NULL,
   `episiotomy` tinyint(1) NOT NULL,
-  `peninealTear` int(10) NOT NULL,
-  `bleedingAfterDelivery` tinyint(1) NOT NULL,
-  `bloodTransfusion` tinyint(1) NOT NULL,
+  `penineal_tear` int(10) NOT NULL,
+  `bleed_delivery` tinyint(1) NOT NULL,
+  `blood_transfusion` tinyint(1) NOT NULL,
   `hemoglobin` varchar(50) COLLATE utf8_bin NOT NULL,
   `temp` double NOT NULL,
   `BP` varchar(50) COLLATE utf8_bin NOT NULL,
-  `complicationsAfterDelivery` varchar(50) COLLATE utf8_bin NOT NULL,
+  `complication_delivery` varchar(50) COLLATE utf8_bin NOT NULL,
   `diognosis` varchar(50) COLLATE utf8_bin NOT NULL,
   `referred` varchar(50) COLLATE utf8_bin NOT NULL,
   `id_mather` int(10) NOT NULL,
@@ -374,26 +402,26 @@ CREATE TABLE `matherexamination` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `newbornassessment`
+-- Table structure for table `newbornassessment`
 --
 
 CREATE TABLE `newbornassessment` (
   `id` int(11) NOT NULL,
-  `modeOfDelivery` varchar(50) COLLATE utf8_bin NOT NULL,
-  `DateOfDelivery` date NOT NULL,
-  `brithWeight` double NOT NULL,
-  `gestationalAgeAtDelivery` varchar(50) COLLATE utf8_bin NOT NULL,
+  `mode` varchar(50) COLLATE utf8_bin NOT NULL,
+  `date` date NOT NULL,
+  `weight` double NOT NULL,
+  `gestational_age` varchar(50) COLLATE utf8_bin NOT NULL,
   `temp` double NOT NULL,
   `pulse` varchar(50) COLLATE utf8_bin NOT NULL,
-  `respRate` varchar(50) COLLATE utf8_bin NOT NULL,
+  `resp_rate` varchar(50) COLLATE utf8_bin NOT NULL,
   `WT` double NOT NULL,
   `length` double NOT NULL,
   `Hc` double NOT NULL,
   `gender` int(10) NOT NULL,
-  `congenitalMalformation` varchar(50) COLLATE utf8_bin NOT NULL,
+  `congenital_malformation` varchar(50) COLLATE utf8_bin NOT NULL,
   `Jaundice` varchar(50) COLLATE utf8_bin NOT NULL,
   `cyanosis` varchar(50) COLLATE utf8_bin NOT NULL,
-  `umbilicalStump` varchar(50) COLLATE utf8_bin NOT NULL,
+  `umbilical_stump` varchar(50) COLLATE utf8_bin NOT NULL,
   `feeding` varchar(50) COLLATE utf8_bin NOT NULL,
   `remarks` varchar(50) COLLATE utf8_bin NOT NULL,
   `id_child` int(10) NOT NULL,
@@ -403,14 +431,14 @@ CREATE TABLE `newbornassessment` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `opreation`
+-- Table structure for table `opreation`
 --
 
 CREATE TABLE `opreation` (
   `id` int(10) NOT NULL,
   `date` date NOT NULL,
-  `theAmountPaid` int(10) NOT NULL,
-  `theFullAmount` int(10) NOT NULL,
+  `Paid` int(10) NOT NULL,
+  `full` int(10) NOT NULL,
   `id_secretary` int(10) NOT NULL,
   `id_mather` int(10) NOT NULL,
   `id_typeofopration` int(10) NOT NULL
@@ -419,29 +447,29 @@ CREATE TABLE `opreation` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `postanatalexamination`
+-- Table structure for table `postanatalexamination`
 --
 
 CREATE TABLE `postanatalexamination` (
   `id` int(10) NOT NULL,
-  `postanatalAssessment` varchar(50) COLLATE utf8_bin NOT NULL,
-  `DaysOfDelivery` int(10) NOT NULL,
-  `DateOfVisit` date NOT NULL,
+  `postanatal_assessment` varchar(50) COLLATE utf8_bin NOT NULL,
+  `day_delivery` int(10) NOT NULL,
+  `date_visit` date NOT NULL,
   `temp` double NOT NULL,
   `pulse` varchar(50) COLLATE utf8_bin NOT NULL,
   `BP` varchar(50) COLLATE utf8_bin NOT NULL,
-  `bleedingAfterDelivery` tinyint(1) NOT NULL,
+  `bleed_delivery` tinyint(1) NOT NULL,
   `Hb` varchar(50) COLLATE utf8_bin NOT NULL,
   `DVT` tinyint(1) NOT NULL,
-  `RuptureUterus` varchar(50) COLLATE utf8_bin NOT NULL,
+  `rupture_uterus` varchar(50) COLLATE utf8_bin NOT NULL,
   `Lochia` varchar(50) COLLATE utf8_bin NOT NULL,
   `incision` varchar(50) COLLATE utf8_bin NOT NULL,
   `seizures` tinyint(1) NOT NULL,
-  `booldTransfusion` tinyint(1) NOT NULL,
+  `boold_transfusion` tinyint(1) NOT NULL,
   `breasts` varchar(50) COLLATE utf8_bin NOT NULL,
-  `FundalHeight` int(10) NOT NULL,
-  `FamilyPlanningCouunseling` varchar(50) COLLATE utf8_bin NOT NULL,
-  `FPAppointment` varchar(50) COLLATE utf8_bin NOT NULL,
+  `Fundal_height` int(10) NOT NULL,
+  `family_planning` varchar(50) COLLATE utf8_bin NOT NULL,
+  `FP_appointment` varchar(50) COLLATE utf8_bin NOT NULL,
   `recommendations` varchar(50) COLLATE utf8_bin NOT NULL,
   `remarks` varchar(50) COLLATE utf8_bin NOT NULL,
   `id_mather` int(10) NOT NULL,
@@ -451,7 +479,7 @@ CREATE TABLE `postanatalexamination` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `preventivetes`
+-- Table structure for table `preventivetes`
 --
 
 CREATE TABLE `preventivetes` (
@@ -465,34 +493,34 @@ CREATE TABLE `preventivetes` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `risksrelatedtocurrentpregnancy`
+-- Table structure for table `risksrelatedtocurrentpregnancy`
 --
 
 CREATE TABLE `risksrelatedtocurrentpregnancy` (
   `id` int(10) NOT NULL,
-  `gestationalAge` varchar(50) COLLATE utf8_bin NOT NULL,
-  `gestationalDiabetes` varchar(50) COLLATE utf8_bin NOT NULL,
-  `SingnsOfPreEclampsia` varchar(50) COLLATE utf8_bin NOT NULL,
-  `vaginalBleeding` varchar(50) COLLATE utf8_bin NOT NULL,
+  `gestational_age` varchar(50) COLLATE utf8_bin NOT NULL,
+  `gestational_diabetes` varchar(50) COLLATE utf8_bin NOT NULL,
+  `Singns_pre_eclampsia` varchar(50) COLLATE utf8_bin NOT NULL,
+  `vaginal_bleed` varchar(50) COLLATE utf8_bin NOT NULL,
   `anemia` varchar(50) COLLATE utf8_bin NOT NULL,
-  `discrepancyOfFundalHeight` varchar(50) COLLATE utf8_bin NOT NULL,
-  `oligoPolydraminous` varchar(50) COLLATE utf8_bin NOT NULL,
+  `discrepancy_fundal` varchar(50) COLLATE utf8_bin NOT NULL,
+  `oligo_polydraminous` varchar(50) COLLATE utf8_bin NOT NULL,
   `malpresentation` varchar(50) COLLATE utf8_bin NOT NULL,
-  `absenceOfFetalMovement` varchar(50) COLLATE utf8_bin NOT NULL,
-  `multiplePregnancy` varchar(50) COLLATE utf8_bin NOT NULL,
+  `absence_movement` varchar(50) COLLATE utf8_bin NOT NULL,
+  `multiple_pregnancy` varchar(50) COLLATE utf8_bin NOT NULL,
   `prom` varchar(50) COLLATE utf8_bin NOT NULL,
-  `RhIncompatibility` varchar(50) COLLATE utf8_bin NOT NULL,
-  `pelvicMass` varchar(50) COLLATE utf8_bin NOT NULL,
+  `rh_incompatibility` varchar(50) COLLATE utf8_bin NOT NULL,
+  `pelvic_mass` varchar(50) COLLATE utf8_bin NOT NULL,
   `other` varchar(50) COLLATE utf8_bin NOT NULL,
   `id_docter` int(10) NOT NULL,
   `id_mather` int(10) NOT NULL,
-  `dateOfVist` date NOT NULL
+  `date_vist` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `secretary`
+-- Table structure for table `secretary`
 --
 
 CREATE TABLE `secretary` (
@@ -504,7 +532,7 @@ CREATE TABLE `secretary` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `teststype`
+-- Table structure for table `teststype`
 --
 
 CREATE TABLE `teststype` (
@@ -513,7 +541,7 @@ CREATE TABLE `teststype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- إرجاع أو استيراد بيانات الجدول `teststype`
+-- Dumping data for table `teststype`
 --
 
 INSERT INTO `teststype` (`id`, `type`) VALUES
@@ -524,7 +552,20 @@ INSERT INTO `teststype` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `transfers`
+-- Table structure for table `time_login`
+--
+
+CREATE TABLE `time_login` (
+  `id` int(10) NOT NULL,
+  `time` datetime NOT NULL,
+  `opreation` varchar(50) COLLATE utf8_bin NOT NULL,
+  `id_information` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transfers`
 --
 
 CREATE TABLE `transfers` (
@@ -539,7 +580,7 @@ CREATE TABLE `transfers` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `typeofimmunization`
+-- Table structure for table `typeofimmunization`
 --
 
 CREATE TABLE `typeofimmunization` (
@@ -548,7 +589,7 @@ CREATE TABLE `typeofimmunization` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- إرجاع أو استيراد بيانات الجدول `typeofimmunization`
+-- Dumping data for table `typeofimmunization`
 --
 
 INSERT INTO `typeofimmunization` (`id`, `typeOfImmunization`) VALUES
@@ -568,7 +609,7 @@ INSERT INTO `typeofimmunization` (`id`, `typeOfImmunization`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `typeofopration`
+-- Table structure for table `typeofopration`
 --
 
 CREATE TABLE `typeofopration` (
@@ -577,7 +618,7 @@ CREATE TABLE `typeofopration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- إرجاع أو استيراد بيانات الجدول `typeofopration`
+-- Dumping data for table `typeofopration`
 --
 
 INSERT INTO `typeofopration` (`id`, `type`) VALUES
@@ -587,7 +628,7 @@ INSERT INTO `typeofopration` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `typeperson`
+-- Table structure for table `typeperson`
 --
 
 CREATE TABLE `typeperson` (
@@ -596,7 +637,7 @@ CREATE TABLE `typeperson` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- إرجاع أو استيراد بيانات الجدول `typeperson`
+-- Dumping data for table `typeperson`
 --
 
 INSERT INTO `typeperson` (`id`, `type`) VALUES
@@ -610,13 +651,13 @@ INSERT INTO `typeperson` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `vist`
+-- Table structure for table `vist`
 --
 
 CREATE TABLE `vist` (
   `id` int(10) NOT NULL,
   `date` date NOT NULL,
-  `nextDate` date NOT NULL,
+  `next_date` date NOT NULL,
   `aim` varchar(50) COLLATE utf8_bin NOT NULL,
   `id_mather` int(10) NOT NULL,
   `id_docter` int(10) NOT NULL
@@ -743,6 +784,13 @@ ALTER TABLE `information`
   ADD KEY `typeperson_id` (`typeperson_id`);
 
 --
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_information` (`id_information`);
+
+--
 -- Indexes for table `malechildcheck`
 --
 ALTER TABLE `malechildcheck`
@@ -827,6 +875,12 @@ ALTER TABLE `secretary`
 --
 ALTER TABLE `teststype`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `time_login`
+--
+ALTER TABLE `time_login`
+  ADD KEY `id_information` (`id_information`);
 
 --
 -- Indexes for table `transfers`
@@ -936,7 +990,7 @@ ALTER TABLE `immunization`
 -- AUTO_INCREMENT for table `information`
 --
 ALTER TABLE `information`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `malechildcheck`
@@ -1023,24 +1077,24 @@ ALTER TABLE `vist`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- قيود الجداول المحفوظة
+-- Constraints for dumped tables
 --
 
 --
--- القيود للجدول `admin`
+-- Constraints for table `admin`
 --
 ALTER TABLE `admin`
   ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`information_id`) REFERENCES `information` (`id`);
 
 --
--- القيود للجدول `antenatalfollowup`
+-- Constraints for table `antenatalfollowup`
 --
 ALTER TABLE `antenatalfollowup`
   ADD CONSTRAINT `antenatalfollowup_ibfk_1` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`),
   ADD CONSTRAINT `antenatalfollowup_ibfk_2` FOREIGN KEY (`id_mather`) REFERENCES `mather` (`id`);
 
 --
--- القيود للجدول `careandpreyery`
+-- Constraints for table `careandpreyery`
 --
 ALTER TABLE `careandpreyery`
   ADD CONSTRAINT `careandpreyery_ibfk_1` FOREIGN KEY (`id_followup`) REFERENCES `followupandcareofpregnantwomen` (`id`),
@@ -1051,7 +1105,7 @@ ALTER TABLE `careandpreyery`
   ADD CONSTRAINT `careandpreyery_ibfk_6` FOREIGN KEY (`id_postanatalexamination`) REFERENCES `postanatalexamination` (`id`);
 
 --
--- القيود للجدول `child`
+-- Constraints for table `child`
 --
 ALTER TABLE `child`
   ADD CONSTRAINT `child_ibfk_1` FOREIGN KEY (`bloodtype_id`) REFERENCES `bloodtype` (`id`),
@@ -1059,7 +1113,7 @@ ALTER TABLE `child`
   ADD CONSTRAINT `child_ibfk_3` FOREIGN KEY (`mather_id`) REFERENCES `mather` (`id`);
 
 --
--- القيود للجدول `childcare`
+-- Constraints for table `childcare`
 --
 ALTER TABLE `childcare`
   ADD CONSTRAINT `childcare_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
@@ -1070,47 +1124,47 @@ ALTER TABLE `childcare`
   ADD CONSTRAINT `childcare_ibfk_6` FOREIGN KEY (`id_newborn`) REFERENCES `newbornassessment` (`id`);
 
 --
--- القيود للجدول `childexamination`
+-- Constraints for table `childexamination`
 --
 ALTER TABLE `childexamination`
   ADD CONSTRAINT `childexamination_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
   ADD CONSTRAINT `childexamination_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `childmeasletsid`
+-- Constraints for table `childmeasletsid`
 --
 ALTER TABLE `childmeasletsid`
   ADD CONSTRAINT `childmeasletsid_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
   ADD CONSTRAINT `childmeasletsid_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `docter`
+-- Constraints for table `docter`
 --
 ALTER TABLE `docter`
   ADD CONSTRAINT `docter_ibfk_1` FOREIGN KEY (`Information_id`) REFERENCES `information` (`id`);
 
 --
--- القيود للجدول `femalechildcheck`
+-- Constraints for table `femalechildcheck`
 --
 ALTER TABLE `femalechildcheck`
   ADD CONSTRAINT `femalechildcheck_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
   ADD CONSTRAINT `femalechildcheck_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `followupandcareofpregnantwomen`
+-- Constraints for table `followupandcareofpregnantwomen`
 --
 ALTER TABLE `followupandcareofpregnantwomen`
   ADD CONSTRAINT `followupandcareofpregnantwomen_ibfk_1` FOREIGN KEY (`id_mather`) REFERENCES `mather` (`id`),
   ADD CONSTRAINT `followupandcareofpregnantwomen_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `hasband`
+-- Constraints for table `hasband`
 --
 ALTER TABLE `hasband`
   ADD CONSTRAINT `hasband_ibfk_1` FOREIGN KEY (`information_id`) REFERENCES `information` (`id`);
 
 --
--- القيود للجدول `immunization`
+-- Constraints for table `immunization`
 --
 ALTER TABLE `immunization`
   ADD CONSTRAINT `immunization_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
@@ -1118,20 +1172,26 @@ ALTER TABLE `immunization`
   ADD CONSTRAINT `immunization_ibfk_3` FOREIGN KEY (`id_tybeOfImmmunization`) REFERENCES `typeofimmunization` (`id`);
 
 --
--- القيود للجدول `information`
+-- Constraints for table `information`
 --
 ALTER TABLE `information`
   ADD CONSTRAINT `information_ibfk_1` FOREIGN KEY (`typeperson_id`) REFERENCES `typeperson` (`id`);
 
 --
--- القيود للجدول `malechildcheck`
+-- Constraints for table `login`
+--
+ALTER TABLE `login`
+  ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`id_information`) REFERENCES `information` (`id`);
+
+--
+-- Constraints for table `malechildcheck`
 --
 ALTER TABLE `malechildcheck`
   ADD CONSTRAINT `malechildcheck_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
   ADD CONSTRAINT `malechildcheck_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `mather`
+-- Constraints for table `mather`
 --
 ALTER TABLE `mather`
   ADD CONSTRAINT `mather_ibfk_1` FOREIGN KEY (`information_id`) REFERENCES `information` (`id`),
@@ -1140,28 +1200,28 @@ ALTER TABLE `mather`
   ADD CONSTRAINT `mather_ibfk_4` FOREIGN KEY (`id_secretary`) REFERENCES `secretary` (`id`);
 
 --
--- القيود للجدول `mathercare`
+-- Constraints for table `mathercare`
 --
 ALTER TABLE `mathercare`
   ADD CONSTRAINT `mathercare_ibfk_1` FOREIGN KEY (`id_mather`) REFERENCES `mather` (`id`),
   ADD CONSTRAINT `mathercare_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `matherexamination`
+-- Constraints for table `matherexamination`
 --
 ALTER TABLE `matherexamination`
   ADD CONSTRAINT `matherexamination_ibfk_1` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`),
   ADD CONSTRAINT `matherexamination_ibfk_2` FOREIGN KEY (`id_mather`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `newbornassessment`
+-- Constraints for table `newbornassessment`
 --
 ALTER TABLE `newbornassessment`
   ADD CONSTRAINT `newbornassessment_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
   ADD CONSTRAINT `newbornassessment_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `opreation`
+-- Constraints for table `opreation`
 --
 ALTER TABLE `opreation`
   ADD CONSTRAINT `opreation_ibfk_1` FOREIGN KEY (`id_secretary`) REFERENCES `secretary` (`id`),
@@ -1169,40 +1229,46 @@ ALTER TABLE `opreation`
   ADD CONSTRAINT `opreation_ibfk_3` FOREIGN KEY (`id_typeofopration`) REFERENCES `typeofopration` (`id`);
 
 --
--- القيود للجدول `postanatalexamination`
+-- Constraints for table `postanatalexamination`
 --
 ALTER TABLE `postanatalexamination`
   ADD CONSTRAINT `postanatalexamination_ibfk_1` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`),
   ADD CONSTRAINT `postanatalexamination_ibfk_2` FOREIGN KEY (`id_mather`) REFERENCES `mather` (`id`);
 
 --
--- القيود للجدول `preventivetes`
+-- Constraints for table `preventivetes`
 --
 ALTER TABLE `preventivetes`
   ADD CONSTRAINT `preventivetes_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`);
 
 --
--- القيود للجدول `risksrelatedtocurrentpregnancy`
+-- Constraints for table `risksrelatedtocurrentpregnancy`
 --
 ALTER TABLE `risksrelatedtocurrentpregnancy`
   ADD CONSTRAINT `risksrelatedtocurrentpregnancy_ibfk_1` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`),
   ADD CONSTRAINT `risksrelatedtocurrentpregnancy_ibfk_2` FOREIGN KEY (`id_mather`) REFERENCES `mather` (`id`);
 
 --
--- القيود للجدول `secretary`
+-- Constraints for table `secretary`
 --
 ALTER TABLE `secretary`
   ADD CONSTRAINT `secretary_ibfk_1` FOREIGN KEY (`information_id`) REFERENCES `information` (`id`);
 
 --
--- القيود للجدول `transfers`
+-- Constraints for table `time_login`
+--
+ALTER TABLE `time_login`
+  ADD CONSTRAINT `time_login_ibfk_1` FOREIGN KEY (`id_information`) REFERENCES `information` (`id`);
+
+--
+-- Constraints for table `transfers`
 --
 ALTER TABLE `transfers`
   ADD CONSTRAINT `transfers_ibfk_1` FOREIGN KEY (`id_child`) REFERENCES `child` (`id`),
   ADD CONSTRAINT `transfers_ibfk_2` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`);
 
 --
--- القيود للجدول `vist`
+-- Constraints for table `vist`
 --
 ALTER TABLE `vist`
   ADD CONSTRAINT `vist_ibfk_1` FOREIGN KEY (`id_docter`) REFERENCES `docter` (`id`),

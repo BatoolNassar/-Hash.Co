@@ -1,0 +1,28 @@
+#tabPane{
+    -fx-padding:0 -1 -1 0;
+
+}
+.tab .tab-label{
+    -fx-background-color:transparent;
+    -fx-alignment:CENTER;
+    -fx-text-fill:#000000;
+
+}
+.tab{
+    -fx-background-color:transparent;
+    -fx-background-radius:0;
+    -fx-padding:0 30 0 30;
+}
+
+.tab:selected{
+    -fx-background-color:transparent;
+}
+
+.tab:focoused{
+    -fx-focus-color:transparent;
+}
+.tap-pane *.tab-header-background{
+    -fx-background-color:transparent;
+    
+}
+
