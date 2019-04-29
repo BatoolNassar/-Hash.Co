@@ -8,7 +8,6 @@ package hash.co;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -18,16 +17,14 @@ import javafx.stage.Stage;
  *
  * @author Osaid Draidi
  */
-public class Admin_pageController implements Initializable {
+public class Secretery_pageController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
-     @FXML
-    public void handleCloseButtonAction(ActionEvent event) {
+     public void handleCloseButtonAction(ActionEvent event) {
         ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
     }
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

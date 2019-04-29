@@ -243,7 +243,8 @@ public class Main_loginController implements Initializable {
                 app_stage.show();
 
             } catch (IOException ex) {
-                System.out.println("Error in checkTybe Method");
+                System.out.println(ex.toString());
+                System.out.println("Error in switch Scenes Method");
             }
         } else if (userNumber.charAt(0) == 'm' || userNumber.charAt(0) == 'M') {
             try {
@@ -256,7 +257,7 @@ public class Main_loginController implements Initializable {
                 app_stage.show();
 
             } catch (IOException ex) {
-                System.out.println("Error in checkTybe Method");
+                System.out.println("Error in switch Scenes Method");
             }
         }
     }

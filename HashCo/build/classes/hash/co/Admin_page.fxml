@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hash.co.Admin_pageController">
    <children>
       <AnchorPane layoutY="92.0" prefHeight="617.0" prefWidth="250.0" style="-fx-background-color: #F5EDEB;">
          <children>
@@ -60,6 +60,11 @@
                   <DropShadow height="11.0" radius="5.0" width="11.0" />
                </effect>
             </Text>
+            <JFXButton layoutX="1164.0" layoutY="3.0" onAction="#handleCloseButtonAction" onMouseClicked="#handleCloseButtonAction" text="X" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
       <Pane fx:id="myAccount_doc1" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
@@ -82,7 +87,8 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </JFXButton>
-         </children></Pane>
+         </children>
+      </Pane>
       <Pane fx:id="myAccount_doc2" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
          <children>
             <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Name :">
@@ -125,37 +131,37 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="647.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="647.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="647.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
@@ -171,7 +177,7 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="192.0" layoutY="285.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="285.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
@@ -186,7 +192,7 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="647.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="647.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
@@ -197,7 +203,8 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </JFXButton>
-         </children></Pane>
+         </children>
+      </Pane>
       <Pane fx:id="myAccount_doc" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
          <children>
             <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Name :">
@@ -240,37 +247,37 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="192.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="647.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="647.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+            <JFXTextField layoutX="647.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
                <font>
                   <Font size="14.0" />
                </font>

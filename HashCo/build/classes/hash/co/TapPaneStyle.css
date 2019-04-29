@@ -9,20 +9,24 @@
 
 }
 .tab{
-    -fx-background-color:transparent;
-    -fx-background-radius:0;
+    -fx-background-radius:7px;
+    -fx-background-color: #F5EDEB;
     -fx-padding:0 30 0 30;
 }
-
+//-fx-tab-header-background-color
 .tab:selected{
-    -fx-background-color:transparent;
+    -fx-background-radius:7px;
+    -fx-background-color: #D61111;
 }
 
 .tab:focoused{
-    -fx-focus-color:transparent;
+    -fx-focus-color:#FDEDEC;
 }
 .tap-pane *.tab-header-background{
     -fx-background-color:transparent;
     
 }
-
+.tab-header-background{
+    -fx-background-color:#ffffff;
+    
+}

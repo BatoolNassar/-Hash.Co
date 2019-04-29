@@ -22,24 +22,29 @@
                   <DropShadow />
                </effect>
             </AnchorPane>
-            <JFXButton layoutY="47.0" prefHeight="50.0" prefWidth="250.0" text="My Acount" textFill="#000000cc">
+            <JFXButton layoutY="107.0" prefHeight="50.0" prefWidth="250.0" text="Financial Record" textFill="#000000cc">
                <font>
                   <Font name="Georgia Bold" size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutY="107.0" prefHeight="47.0" prefWidth="250.0" text="Information" textFill="#000000cc">
+            <JFXButton layoutY="47.0" prefHeight="47.0" prefWidth="250.0" text="Information" textFill="#000000cc">
                <font>
                   <Font name="Georgia Bold" size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutY="167.0" prefHeight="47.0" prefWidth="250.0" text="Add Acount" textFill="#000000cc">
+            <JFXButton layoutY="167.0" prefHeight="47.0" prefWidth="250.0" text="Care &amp; Pregnancy" textFill="#000000cc">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutY="227.0" prefHeight="47.0" prefWidth="250.0" text="Log Out" textFill="#d61111cc">
+            <JFXButton layoutY="287.0" prefHeight="47.0" prefWidth="250.0" text="Log Out" textFill="#d61111cc">
                <font>
                   <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="227.0" prefHeight="47.0" prefWidth="250.0" text="Children" textFill="#000000cc">
+               <font>
+                  <Font name="System Bold" size="14.0" />
                </font>
             </JFXButton>
          </children>
@@ -62,6 +67,168 @@
             </Text>
          </children>
       </AnchorPane>
+      <Pane fx:id="myAccount_doc" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Paid :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="120.0" prefHeight="35.0" prefWidth="125.0" text="Remained :">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane fx:id="myAccount_doc1" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXTabPane layoutX="65.0" layoutY="45.0" prefHeight="526.0" prefWidth="820.0" style="-fx-background-color: #f0f0f0;">
+               <tabs>
+                  <Tab text="Mother">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="600.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="140.0" prefHeight="35.0" prefWidth="126.0" text="User Number :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="40.0" prefHeight="35.0" prefWidth="126.0" text="Name :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="290.0" prefHeight="35.0" prefWidth="126.0" text="Date of Birth :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="190.0" prefHeight="35.0" prefWidth="126.0" text="Phone :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="240.0" prefHeight="35.0" prefWidth="126.0" text="Email :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="390.0" prefHeight="35.0" prefWidth="126.0" text="Blood Type :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="90.0" prefHeight="35.0" prefWidth="126.0" text="Identity Number :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="340.0" prefHeight="35.0" prefWidth="126.0" text="Address :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField layoutX="178.0" layoutY="40.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="90.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="140.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="190.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="240.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="290.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="340.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton layoutX="178.0" layoutY="440.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Show" textFill="#f5f4f4">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXComboBox layoutX="176.0" layoutY="395.0" prefHeight="35.0" prefWidth="125.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Husband">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="40.0" prefHeight="35.0" prefWidth="126.0" text="Name :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="90.0" prefHeight="35.0" prefWidth="126.0" text="Phone :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="135.0" prefHeight="35.0" prefWidth="126.0" text="Identity Number :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField layoutX="178.0" layoutY="40.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="90.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="178.0" layoutY="135.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton layoutX="178.0" layoutY="190.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Show" textFill="#f5f4f4">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </Pane>
       <Pane fx:id="myAccount_doc2" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
          <children>
             <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Name :">
@@ -176,114 +343,6 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </JFXButton>
-         </children>
-      </Pane>
-      <Pane fx:id="myAccount_doc" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
-         <children>
-            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Name :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="230.0" prefHeight="35.0" prefWidth="125.0" text="Password :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="120.0" prefHeight="35.0" prefWidth="125.0" text="Email :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="175.0" prefHeight="35.0" prefWidth="125.0" text="Address :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="65.0" layoutY="175.0" prefHeight="35.0" prefWidth="125.0" text="User Name :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="120.0" prefHeight="35.0" prefWidth="125.0" text="Phone Number :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="230.0" prefHeight="35.0" prefWidth="125.0" text="Birthday :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="65.0" prefHeight="35.0" prefWidth="125.0" text="Identity Number :">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField layoutX="192.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField layoutX="192.0" layoutY="230.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="65.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="120.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField layoutX="647.0" layoutY="175.0" prefHeight="35.0" prefWidth="250.0" promptText="osaid" style="-fx-background-color: #f1f1f1;" unFocusColor="#4d4d4d49">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXDatePicker defaultColor="#008f81ca" layoutX="647.0" layoutY="230.0" prefHeight="35.0" prefWidth="180.0" />
-            <JFXButton layoutX="190.0" layoutY="285.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Edit " textFill="#f5f4f4">
-               <font>
-                  <Font name="Arial Bold" size="15.0" />
-               </font>
-            </JFXButton>
-         </children>
-      </Pane>
-      <Pane fx:id="myAccount_doc1" layoutX="254.0" layoutY="94.0" prefHeight="616.0" prefWidth="946.0" style="-fx-background-color: #ffffff;">
-         <children>
-            <JFXButton layoutX="423.0" layoutY="521.0" prefHeight="35.0" prefWidth="100.0" ripplerFill="#393939" style="-fx-background-color: #D61111; -fx-background-radius: 15px;" text="Show" textFill="#f5f4f4">
-               <font>
-                  <Font name="Arial Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXTabPane layoutX="65.0" layoutY="65.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #f0f0f0;">
-               <tabs>
-                  <Tab style="-fx-background-radius: 7px; -fx-background-color: #000000; -fx-tab-header-background-color: #000000;" text="tab2">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
-                  </Tab>
-                  <Tab style="-fx-background-color: #000000; -fx-background-radius: 7px;" text="tab1">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 10px;" />
-                    </content>
-                  </Tab>
-               </tabs>
-            </JFXTabPane>
          </children>
       </Pane>
    </children>
